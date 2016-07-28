@@ -80,8 +80,10 @@ a {
   margin: auto;
   z-index: 2;
   border-radius: 5px 5px 0px 0px;
-  position: relative;
-  bottom: -21rem;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .center {
