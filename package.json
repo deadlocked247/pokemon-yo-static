@@ -1,0 +1,23 @@
+{
+  "name": "yo-signup",
+  "version": "1.0.0",
+  "description": "pokemon yo static webpage",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deadlocked247/pokemon-yo-static.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deadlocked247/pokemon-yo-static/issues"
+  },
+  "homepage": "https://github.com/deadlocked247/pokemon-yo-static#readme",
+  "dependencies": {
+    "ejs": "^2.5.1",
+    "express": "^4.14.0"
+  }
+}

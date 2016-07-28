@@ -1,0 +1,121 @@
+@font-face {
+  font-family: Brandon;
+  font-weight: 400;
+  src: url("fonts/brandon-regular.otf") format("opentype");
+}
+@font-face {
+  font-family: Brandon;
+  font-weight: 300;
+  src: url("fonts/brandon-light.otf") format("opentype");
+}
+@font-face {
+  font-family: Brandon;
+  font-weight: 500;
+  src: url("fonts/brandon-semibold.otf") format("opentype");
+}
+@font-face {
+  font-family: Brandon;
+  font-weight: 600;
+  src: url("fonts/brandon-bold.otf") format("opentype");
+}
+
+* {
+  font-family: Brandon, sans-serif;
+}
+
+.logo {
+  width: 18rem;
+  z-index: 1;
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+body {
+  background: #FFCD10;
+}
+
+.bg {
+  width: 100%;
+  max-width: 50rem;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.center {
+  width: 100%;
+  top: 40%;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero {
+  z-index: 2;
+  width: 100%;
+  padding-top: 1rem;
+  font-size: 20px;
+}
+
+input {
+  width: 500px;
+  border: 0px;
+  border-radius: 25px;
+  display: inline-block;
+  margin-right: -3rem;
+  padding-left: 1rem;
+  padding-right: 3rem;
+  font-size: 16px;
+}
+
+.input {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.btn {
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  background: rgb(33, 150, 243);
+  padding: .5rem 2rem;
+}
+
+
+@media (max-width: 600px) {
+  input {
+    width: calc(100% - 2rem);
+    padding-right: 1rem;
+    margin: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .btn {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  .input {
+    display: block;
+  }
+  .hero {
+    width: calc(100% - 1rem);
+    font-size: 24px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+input:focus {
+  outline: none
+}
+.btn:hover {
+  opacity: 0.75;
+}
