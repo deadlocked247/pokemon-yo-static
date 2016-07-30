@@ -93,6 +93,9 @@
     <div class="hero">
       Find nearby Trainers to trade Pokemon with
     </div>
+    <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+       <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
       <form action="#" onSubmit="onClick()" class="input">
         <input type="email" name="email" placeholder="Enter your email and learn when we launch"/>
         <div id="mce-responses" class="clear">
@@ -103,7 +106,7 @@
           SIGN UP
         </button>
       </form>
-      <div class="success">
+      <div class="success animated fadeInUp">
         Got it! Follow us for more updates!
       </div>
       <div class="error">
@@ -177,24 +180,32 @@
 var x = location.search.split("=");
 x.shift();
 var input = decodeURIComponent(x.join(''));
-
+if (input) {
+  $('.success').show();
+  setTimeout(function() { $('.success').hide(); }, 4000);
+}
 $('input').val(input);
   function onClick(e) {
+    var email = $('input').val();
+    if (email) {
     $('.error').hide();
     $('.success').hide();
-    var email = $('input').val();
-    if (email)
+    $('.input').hide();
+    $('.spinner').show();
       $.post('/lists/subscribe', {
         "email": email,
       }, function (data) {
-        console.log(data);
+        $('.spinner').hide();
+        $('.input').show();
         if (data !== 'OK') {
           $('.error').show();
         }
         else {
-          $('.success').show();
+          setTimeout(function() { $('.success').hide(); }, 4000);
         }
       });
+    }
+    return false;
   };
 </script>
 <script>
